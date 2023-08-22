@@ -42,7 +42,8 @@ const items = ref([
     <img
       src="/images/logo.svg"
       alt="">
-    <h1>Vue.js ハンズオン</h1>
+    <h1>vue３の公開
+    </h1>
   </header>
 
   <main class="main">
