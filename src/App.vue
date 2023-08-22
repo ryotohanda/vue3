@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const items = ref([
   {
     id: 1,
-    name: 'S3',
+    name: 'S3で自動デプロイ',
     description:
       '刻んだ野菜をアボカドと混ぜてディップに。こんがり焼いたバゲットとお召し上がりください。',
     price: 480,
