@@ -4,34 +4,34 @@ import { ref } from 'vue'
 const items = ref([
   {
     id: 1,
-    name: 'S3で自動デプロイ',
+    name: 'vue3',
     description:
-      '刻んだ野菜をアボカドと混ぜてディップに。こんがり焼いたバゲットとお召し上がりください。',
-    price: 480,
+      'ブラウザ上で操作する静的なシングルページアプリケーションの作成',
+    price: 0.0000,
     image: '/images/item1.jpg'
   },
   {
     id: 2,
-    name: '甜麺醤',
+    name: 'cloudPipeline',
     description:
-      '子供のころにかった、あのホットケーキを再現しました。素朴でどこか懐かしい味をどうぞ。',
-    price: 1180,
+      'githubのmsterブランチの変更をキャッチし、自動でS3にデプロイしてくれる',
+    price: 0.00025,
     image: '/images/item2.jpg'
   },
   {
     id: 3,
-    name: 'HOP WTR',
+    name: 'S3',
     description:
-      'ロサンゼルス生まれのスパークリングウォーター。ノンカロリー、ノンアルコールの新感覚飲料です。',
-    price: 320,
+      'クラウドストレージ。サーバーと違い内部で処理はせず、ブラウザからのリクエストにvueファイルを返す。',
+    price: 0.00025,
     image: '/images/item3.jpg'
   },
   {
     id: 4,
-    name: 'チーズフレンチフライ',
+    name: 'cloudFront',
     description:
-      'イタリア産チーズをたっぷりかけたアツアツのフレンチフライ。みんな大好きな一品です。',
-    price: 670,
+      'プライベートなS3のファイルをブラウザから見える形に変更したもの',
+    price: 0.00025,
     image: '/images/item4.jpg'
   }
 ])
@@ -54,7 +54,7 @@ const items = ref([
         <div class="description">
           <h2>{{ item.name }}</h2>
           <p>{{ item.description }}</p>
-          <span>¥<span class="price">{{ item.price }}</span></span>
+          <span>USD<span class="price">{{ item.price }}</span></span>
         </div>
       </div>
     </template>
