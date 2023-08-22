@@ -55,7 +55,6 @@ const items = ref([
         <div class="description">
           <h2>{{ item.name }}</h2>
           <p>{{ item.description }}</p>
-          <span>USD<span class="price">{{ item.price }}</span></span>
         </div>
       </div>
     </template>
