@@ -33,6 +33,14 @@ const items = ref([
       'プライベートなS3のファイルをブラウザから見える形に変更したもの',
     price: 0.00025,
     image: '/images/item4.jpg'
+  },
+  {
+    id: 5,
+    name: 'cypress',
+    description:
+      'E2Eのテスト自動化ツール',
+    price: 0.00025,
+    image: '/images/item4.jpg'
   }
 ])
 </script>
@@ -42,13 +50,12 @@ const items = ref([
     <img
       src="/images/logo.svg"
       alt="">
-    <h1>vue３の公開
-    </h1>
+    <h1>vue３ハンズオン</h1>
   </header>
 
   <main class="main">
     <template v-for="item in items" :key="item.id">
-      <div class="item">
+     <div class="item">
         <div class="thumbnail">
           <img :src="item.image" alt="">
         </div>
