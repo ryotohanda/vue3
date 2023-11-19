@@ -1,152 +1,33 @@
-<script setup>
-import { ref } from 'vue'
-
-const items = ref([
-  {
-    id: 1,
-    name: 'vue3',
-    description:
-      'ブラウザ上で操作する静的なシングルページアプリケーションの作成',
-    price: 0.0000,
-    image: '/images/item1.jpg'
+<script>
+export default {
+  data() {
+    return {}
   },
-  {
-    id: 2,
-    name: 'cloudPipeline',
-    description:
-      'githubのmsterブランチの変更をキャッチし、自動でS3にデプロイしてくれる',
-    price: 0.00025,
-    image: '/images/item2.jpg'
-  },
-  {
-    id: 3,
-    name: 'S3',
-    description:
-      'クラウドストレージ。サーバーと違い内部で処理はせず、ブラウザからのリクエストにvueファイルを返す。',
-    price: 0.00025,
-    image: '/images/item3.jpg'
-  },
-  {
-    id: 4,
-    name: 'cloudFront',
-    description:
-      'プライベートなS3のファイルをブラウザから見える形に変更したもの',
-    price: 0.00025,
-    image: '/images/item4.jpg'
-  },
-  {
-    id: 5,
-    name: 'cypress',
-    description:
-      'E2Eのテスト自動化ツール',
-    price: 0.00025,
-    image: '/images/item4.jpg'
-  }
-])
+  methods: {},
+}
 </script>
 
 <template>
-  <header class="header">
-    <img
-      src="/images/logo.svg"
-      alt="">
-    <h1>vue３ハンズオン</h1>
-  </header>
-
-  <main class="main">
-    <template v-for="item in items" :key="item.id">
-     <div class="item">
-        <div class="thumbnail">
-          <img :src="item.image" alt="">
-        </div>
-        <div class="description">
-          <h2>{{ item.name }}</h2>
-          <p>{{ item.description }}</p>
-        </div>
-      </div>
-    </template>
-  </main>
+  // title
+  <h1>My ToDo App</h1>
+  <input type="text" /><button>追加</button><button>完了済みを削除する</button>
+  <ul>
+    <li>
+      <input type="checkbox" checked /><span class="todo-done"
+        >Vueをマスターする</span
+      >
+    </li>
+    <li><input type="checkbox" /><span>牛乳を買う</span></li>
+    <li><input type="checkbox" /><span>家賃を払う</span></li>
+  </ul>
 </template>
 
 <style>
 body {
-  font-family: sans-serif;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #2a832074;
 }
 
-#app {
-  width: 90%;
-  margin: 0 5%;
-  color: #242424;
-}
-
-.header {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.header > img {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-}
-
-.header > h1 {
-  font-size: 80px;
-  font-weight: bold;
-  line-height: 80px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.main {
-  display: grid;
-  grid-template-columns: 3fr 3fr 3fr 3fr;
-  column-gap: 24px;
-  row-gap: 24px;
-}
-
-.item {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.item:hover {
-  transition: 0.2s transform ease-out;
-  transform: scale(1.05);
-}
-
-.item > div.thumbnail > img {
-  width: 100%;
-  height: calc(100%);
-  object-fit: cover;
-}
-
-.item > div.description {
-  text-align: left;
-  margin-top: 20px;
-}
-
-.item > div.description > p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-.item > div.description > span {
-  display: block;
-  margin-top: 10px;
-  font-size: 20px;
-}
-
-.item > div.description > span > .price {
-  font-size: 28px;
-  font-weight: bold;
+.todo-done {
+  text-decoration: line-through;
 }
 </style>
