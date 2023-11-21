@@ -14,11 +14,11 @@ export default {
   <ul>
     <li>
       <input type="checkbox" checked /><span class="todo-done"
-        >Vueをマスターする</span
+        >todoリスト作ってタスク管理する</span
       >
     </li>
-    <li><input type="checkbox" /><span>牛乳を買う</span></li>
-    <li><input type="checkbox" /><span>家賃を払う</span></li>
+    <li><input type="checkbox" /><span>ヘッダー、フッターコンポーネントを手抜き作成する</span></li>
+    <li><input type="checkbox" /><span>pageを作成し、ヘッターからvm.$routerで遷移する</span></li>
   </ul>
 </template>
 
